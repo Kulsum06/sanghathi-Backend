@@ -1,7 +1,8 @@
 
 from pymongo import MongoClient
+import os
 
-client = MongoClient("mongodb+srv://emithru:emith56cmrit@emithru.zv3i9.mongodb.net/?retryWrites=true&w=majority&appName=emithru")
+client = MongoClient(os.getenv("MONGO_URI"))
 
 db = client["cmrit_test"]
 
